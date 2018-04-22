@@ -26,6 +26,8 @@ public:
     void Render();
     void Clean();
     void HandleEvents();
+    static SDL_Event event;
+    
     
     bool running()
     {

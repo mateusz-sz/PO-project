@@ -17,10 +17,29 @@ GameObject::GameObject(const char* textsheet, int x, int y) //creating new objec
     yPos = y;
 }
 
-void GameObject::Update()
+void GameObject::Update() //position update for objects
 {
-    xPos ++;
-    yPos ++;
+    srand(time(NULL));
+    int random = rand() % 1000000;
+    
+    switch (random % 4)  //just some random moves
+    {
+        case 0:
+            xPos++;
+            break;
+        case 1:
+            xPos--;
+            break;
+        case 2:
+            yPos++;
+            break;
+        case 3:
+            yPos--;
+            break;
+            
+        default:
+            break;
+    }
     
     srcRect.h = 32;
     srcRect.w = 32;

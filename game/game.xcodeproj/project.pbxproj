@@ -15,7 +15,8 @@
 		AC2B9062208BE21A00ADF045 /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2B9060208BE21900ADF045 /* TextureManager.cpp */; };
 		AC2B9065208BE3FA00ADF045 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2B9063208BE3FA00ADF045 /* GameObject.cpp */; };
 		AC2B9068208BEE9300ADF045 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2B9066208BEE9300ADF045 /* Map.cpp */; };
-		AC2B906B208BFD3000ADF045 /* Entity Component System.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2B9069208BFD3000ADF045 /* Entity Component System.cpp */; };
+		AC2B906E208C941600ADF045 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2B906C208C941600ADF045 /* Player.cpp */; };
+		AC2B9071208CB4A400ADF045 /* Collider Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2B906F208CB4A400ADF045 /* Collider Component.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,8 +46,10 @@
 		AC2B9064208BE3FA00ADF045 /* GameObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameObject.hpp; sourceTree = "<group>"; };
 		AC2B9066208BEE9300ADF045 /* Map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
 		AC2B9067208BEE9300ADF045 /* Map.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Map.hpp; sourceTree = "<group>"; };
-		AC2B9069208BFD3000ADF045 /* Entity Component System.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Entity Component System.cpp"; sourceTree = "<group>"; };
-		AC2B906A208BFD3000ADF045 /* Entity Component System.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "Entity Component System.hpp"; sourceTree = "<group>"; };
+		AC2B906C208C941600ADF045 /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		AC2B906D208C941600ADF045 /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
+		AC2B906F208CB4A400ADF045 /* Collider Component.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Collider Component.cpp"; sourceTree = "<group>"; };
+		AC2B9070208CB4A400ADF045 /* Collider Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "Collider Component.hpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,16 +88,18 @@
 			isa = PBXGroup;
 			children = (
 				AC2B904D208B8F7D00ADF045 /* main.cpp */,
-				AC2B9060208BE21900ADF045 /* TextureManager.cpp */,
-				AC2B9061208BE21900ADF045 /* TextureManager.hpp */,
+				AC2B906C208C941600ADF045 /* Player.cpp */,
+				AC2B906D208C941600ADF045 /* Player.hpp */,
 				AC2B9057208B94FD00ADF045 /* Game.cpp */,
 				AC2B9058208B94FD00ADF045 /* Game.hpp */,
 				AC2B9063208BE3FA00ADF045 /* GameObject.cpp */,
 				AC2B9064208BE3FA00ADF045 /* GameObject.hpp */,
 				AC2B9066208BEE9300ADF045 /* Map.cpp */,
-				AC2B9069208BFD3000ADF045 /* Entity Component System.cpp */,
-				AC2B906A208BFD3000ADF045 /* Entity Component System.hpp */,
 				AC2B9067208BEE9300ADF045 /* Map.hpp */,
+				AC2B906F208CB4A400ADF045 /* Collider Component.cpp */,
+				AC2B9070208CB4A400ADF045 /* Collider Component.hpp */,
+				AC2B9060208BE21900ADF045 /* TextureManager.cpp */,
+				AC2B9061208BE21900ADF045 /* TextureManager.hpp */,
 			);
 			path = game;
 			sourceTree = "<group>";
@@ -167,9 +172,10 @@
 			files = (
 				AC2B9065208BE3FA00ADF045 /* GameObject.cpp in Sources */,
 				AC2B9068208BEE9300ADF045 /* Map.cpp in Sources */,
+				AC2B906E208C941600ADF045 /* Player.cpp in Sources */,
 				AC2B904E208B8F7D00ADF045 /* main.cpp in Sources */,
-				AC2B906B208BFD3000ADF045 /* Entity Component System.cpp in Sources */,
 				AC2B9059208B94FD00ADF045 /* Game.cpp in Sources */,
+				AC2B9071208CB4A400ADF045 /* Collider Component.cpp in Sources */,
 				AC2B9062208BE21A00ADF045 /* TextureManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
