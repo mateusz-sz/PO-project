@@ -17,6 +17,7 @@
 		AC2B9068208BEE9300ADF045 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2B9066208BEE9300ADF045 /* Map.cpp */; };
 		AC2B906E208C941600ADF045 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2B906C208C941600ADF045 /* Player.cpp */; };
 		AC2B9071208CB4A400ADF045 /* Collider Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2B906F208CB4A400ADF045 /* Collider Component.cpp */; };
+		AC2B9074208DEBA400ADF045 /* Main Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC2B9072208DEBA400ADF045 /* Main Menu.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +51,8 @@
 		AC2B906D208C941600ADF045 /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 		AC2B906F208CB4A400ADF045 /* Collider Component.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Collider Component.cpp"; sourceTree = "<group>"; };
 		AC2B9070208CB4A400ADF045 /* Collider Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "Collider Component.hpp"; sourceTree = "<group>"; };
+		AC2B9072208DEBA400ADF045 /* Main Menu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Main Menu.cpp"; sourceTree = "<group>"; };
+		AC2B9073208DEBA400ADF045 /* Main Menu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "Main Menu.hpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				AC2B904D208B8F7D00ADF045 /* main.cpp */,
+				AC2B9072208DEBA400ADF045 /* Main Menu.cpp */,
+				AC2B9073208DEBA400ADF045 /* Main Menu.hpp */,
 				AC2B906C208C941600ADF045 /* Player.cpp */,
 				AC2B906D208C941600ADF045 /* Player.hpp */,
 				AC2B9057208B94FD00ADF045 /* Game.cpp */,
@@ -170,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2B9074208DEBA400ADF045 /* Main Menu.cpp in Sources */,
 				AC2B9065208BE3FA00ADF045 /* GameObject.cpp in Sources */,
 				AC2B9068208BEE9300ADF045 /* Map.cpp in Sources */,
 				AC2B906E208C941600ADF045 /* Player.cpp in Sources */,
