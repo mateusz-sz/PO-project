@@ -10,7 +10,7 @@
 #include "TextureManager.hpp"
 
 int level1[25][25] = {
-    
+
      {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
      {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
      {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -36,22 +36,22 @@ int level1[25][25] = {
      {0,0,0,0,0,0,0,0,0,0,0,0,1,2,2,1,2,2,0,0},
      {0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0},
      {0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,1,0},
-    
+
 };
 
 Map::Map()  // loading map components
 {
-    dirt = TextureManager::LoadTexture("/Users/dejw/Desktop/Moja Gra/game/images/dirt.jpg");
-    grass = TextureManager::LoadTexture("/Users/dejw/Desktop/Moja Gra/game/images/grass.jpg");
-    water = TextureManager::LoadTexture("/Users/dejw/Desktop/Moja Gra/game/images/water.jpg");
-    
+    dirt = TextureManager::LoadTexture("/game/res/dirt.jpg");
+    grass = TextureManager::LoadTexture("/game/res/grass.jpg");
+    water = TextureManager::LoadTexture("/game/res/water.jpg");
+
     LoadMap(level1);
-    
+
     src.x = src.y = 0;
     src.w = src.h = dest.w = dest.h = 32;
-    
+
     dest.x = dest.y = 0;
-    
+
 }
 
 void Map::LoadMap(int loadedMap[25][25])
@@ -68,7 +68,7 @@ void Map::LoadMap(int loadedMap[25][25])
 void Map::DrawMap()
 {
     int typeOfBackground = 0;
-    
+
     for(int i=0 ; i<25; i++)
     {
         for(int j=0; j<25; j++)
@@ -76,11 +76,11 @@ void Map::DrawMap()
             typeOfBackground = map[i][j];
             dest.x = j * 32;
             dest.y = i * 32;
-            
+
             if(typeOfBackground == 0)TextureManager::Draw(water, src, dest);
             if(typeOfBackground == 1)TextureManager::Draw(grass, src, dest);
             if(typeOfBackground == 2)TextureManager::Draw(dirt, src, dest);
-            
+
         }
     }
 }
