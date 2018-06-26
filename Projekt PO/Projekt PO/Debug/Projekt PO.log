@@ -1,0 +1,3 @@
+﻿  Main.cpp
+c:\users\dawid\desktop\projekt po\projekt po\main.cpp(24): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+  Projekt PO.vcxproj -> C:\Users\Dawid\Desktop\Projekt PO\Debug\Projekt PO.exe
