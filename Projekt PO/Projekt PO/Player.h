@@ -14,7 +14,7 @@ using namespace sf;
 class Player
 {
 public:
-	Player (Texture* texture, Vector2u imageCount, float switchTime);
+	Player (Texture* texture, Vector2u imageCount, float switchTime, float height, float width);
 	~Player();
 	void Update(float deltaTime);
 	void DrawPlayer(RenderWindow &win);
@@ -23,7 +23,7 @@ public:
 	Collider GetCollider() { return Collider(body); }
 
 private:
-	int health, armor;
+	int Health, Armor;
 	float PlayerSpeed;
 
 	Animation animation;

@@ -8,15 +8,9 @@
 #include<cstdlib>
 
 using namespace sf;
-
-class Entity
+class GenerateRandomNumber
 {
 public:
-	RectangleShape rect;
-	Sprite sprite;
-	Text text;
-
-private:
-	
+	int generateRandom(int maxInt);
 };
 

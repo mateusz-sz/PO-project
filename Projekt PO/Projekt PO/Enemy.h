@@ -7,26 +7,31 @@
 #include<vector>
 #include<cstdlib>
 
-#include "Character.h"
 #include "Entity.h"
+#include "Animation.h"
+#include "Collider.h"
+#include "Player.h"
 
 using namespace sf;
 
 class Enemy : public Entity
 {
 public:
-	
+	Enemy(Texture* texture, Vector2u imageCount, float switchTime, int xPos, int yPos);
+	~Enemy();
 
-	enum Type
-	{
-		Zombie,
-		Worm,
-	};
+	void Update(float deltaTime, Player player);
+	void DrawEnemy(RenderWindow &win);
 
-public:
-	explicit Enemy(Type type);
+	Vector2f GetEnemyPosition();
+	Collider GetCollider() { return Collider(body); }
 
 private:
-	Type MyType;
+	float Speed, Damage, Health;
+
+	unsigned int row;
+private:
+	Animation animation;
+	RectangleShape body;
 };
 

@@ -73,5 +73,8 @@
     <Image Include="Images\PlayerSprite.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Images\EnemySprite.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

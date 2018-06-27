@@ -1,27 +1,23 @@
 #include "Player.h"
 
-
-
-Player::Player(Texture* texture, Vector2u imageCount, float switchTime)
+Player::Player(Texture* texture, Vector2u imageCount, float switchTime, float height, float width)
 	:animation(texture, imageCount, switchTime)
 {
 	
-	health = 100;
+	Health = 100;
 	PlayerSpeed = 300.f;
 	row = 0;
 
-	body.setSize(Vector2f(100.f, 150.f));
+	body.setSize(Vector2f(width, height));
 	body.setOrigin(body.getSize() / 2.0f);
 	body.setPosition(205.f, 205.f);
 	body.setTexture(texture);
 
 }
 
-
 Player::~Player()
 {
 }
-
 
 void Player::Update(float deltaTime)
 {

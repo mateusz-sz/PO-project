@@ -144,6 +144,7 @@
     <ClInclude Include="TextureHolder.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Images\EnemySprite.png" />
     <Image Include="Images\PlayerSprite.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
