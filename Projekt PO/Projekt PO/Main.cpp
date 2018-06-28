@@ -84,6 +84,8 @@ int main()
 		window.clear(Color::Green);
 		window.setView(view);
 
+		//DEJWO TO ZIOMAL
+
 		//DRAWING
 		player.DrawPlayer(window);
 		p1.Draw(window);
