@@ -12,10 +12,12 @@ using namespace sf;
 class Entity
 {
 public:
-	RectangleShape rect;
+	
+	RectangleShape body;
 	Sprite sprite;
 	Text text;
-
+	CircleShape shape;
+	
 private:
 	
 };

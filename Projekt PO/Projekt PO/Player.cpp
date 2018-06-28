@@ -5,14 +5,13 @@ Player::Player(Texture* texture, Vector2u imageCount, float switchTime, float he
 {
 	
 	Health = 100;
-	PlayerSpeed = 300.f;
+	PlayerSpeed = 180.f;
 	row = 0;
-
+	
 	body.setSize(Vector2f(width, height));
 	body.setOrigin(body.getSize() / 2.0f);
 	body.setPosition(205.f, 205.f);
 	body.setTexture(texture);
-
 }
 
 Player::~Player()
@@ -26,21 +25,25 @@ void Player::Update(float deltaTime)
 	{
 		movement.y -= PlayerSpeed * deltaTime;
 		row = 3; //setting 4th row in the player sprite walking sheet
+		direction = 0;
 	}
-	if (Keyboard::isKeyPressed(Keyboard::S))
+	else if (Keyboard::isKeyPressed(Keyboard::S))
 	{
 		movement.y += PlayerSpeed * deltaTime;
 		row = 0;
+		direction = 1;
 	}
-	if (Keyboard::isKeyPressed(Keyboard::A))
+	else if (Keyboard::isKeyPressed(Keyboard::A))
 	{
 		movement.x -= PlayerSpeed * deltaTime;
 		row = 1;
+		direction = 2;
 	}
-	if (Keyboard::isKeyPressed(Keyboard::D))
+	else if (Keyboard::isKeyPressed(Keyboard::D))
 	{
 		movement.x += PlayerSpeed * deltaTime;
 		row = 2;
+		direction = 3;
 	}
 	
 	//if (movement.x == 0 and movement.y == 0) row = 0;

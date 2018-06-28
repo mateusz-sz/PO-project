@@ -4,10 +4,9 @@ Enemy::Enemy(Texture* texture, Vector2u imageCount, float switchTime, int xPos, 
 	:animation(texture, imageCount, switchTime)
 {
 	Health = 100;
-	Speed = 200.f;
-	row = 0;
-
-	body.setSize(Vector2f(100.f, 150.f));
+	Speed = 100.f;
+	row = 0; 
+	body.setSize(Vector2f(50.f, 75.f));
 	body.setOrigin(body.getSize() / 2.0f);
 	body.setPosition(rand() % xPos, rand() % yPos);
 	body.setTexture(texture); 
@@ -27,7 +26,7 @@ void Enemy::Update(float deltaTime, Player player)
 
 	Vector2f movement(0.f, 0.f);
 
-	if (distance > 600) //enemy is just moving around randomly
+	if (distance > 300) //enemy is just moving around randomly
 	{
 		if (randomNumber == 3){
 			movement.y -= Speed * deltaTime;
@@ -44,28 +43,31 @@ void Enemy::Update(float deltaTime, Player player)
 	}
 	else //enemy starts to chase a player
 	{
-		if (GetEnemyPosition().x < PlayerPosition.x) {
-			movement.x += Speed * deltaTime;
+		if (GetEnemyPosition().x  < PlayerPosition.x) {
+			movement.x += Speed * deltaTime; 
 		}
 		if (GetEnemyPosition().x > PlayerPosition.x) {
-			movement.x -= Speed * deltaTime;
+			movement.x -= Speed * deltaTime; 
 		}
 		if (GetEnemyPosition().y > PlayerPosition.y) {
-			movement.y -= Speed * deltaTime;
+			movement.y -= Speed * deltaTime; 
 		}
 		if (GetEnemyPosition().y < PlayerPosition.y) {
 			movement.y += Speed * deltaTime;
 		}
 	}
-	if (movement.x > 0 and movement.y > 0)row = 2; //right down
-	if (movement.x < 0 and movement.y < 0)row = 1; //left up
-	if (movement.x > 0 and movement.y < 0)row = 2; //right up
-	if (movement.x < 0 and movement.y > 0) row = 1;//left down
-	if (movement.x > 0 and movement.y == 0) row = 2; //right
-	if (movement.x < 0 and movement.y == 0) row = 1; //left
-	if (movement.x == 0 and movement.y < 0) row = 3; //up
-	if (movement.x == 0 and movement.y > 0) row = 0;//down
-
+	int Xdist = (int)PlayerPosition.x - (int)GetEnemyPosition().x;
+	int Ydist = (int)PlayerPosition.y - (int)GetEnemyPosition().y;
+	if (abs(Xdist) > abs(Ydist)) //left or right
+	{
+		if (Xdist > 0) row = 2; //right
+		else row = 1; //left
+	}
+	else //up or down
+	{
+		if (Ydist < 0) row = 3;// up
+		else row = 0; //down
+	}
 	//if (movement.x == 0 and movement.y == 0) row = 0;
 
 	animation.Update(row, deltaTime);

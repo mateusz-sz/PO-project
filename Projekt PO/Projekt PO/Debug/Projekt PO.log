@@ -1,3 +1,4 @@
-﻿  Enemy.cpp
-c:\users\dawid\desktop\projekt po\projekt po\enemy.cpp(12): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+﻿  Main.cpp
+c:\users\dawid\desktop\projekt po\projekt po\main.cpp(93): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\dawid\desktop\projekt po\projekt po\main.cpp(100): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Projekt PO.vcxproj -> C:\Users\Dawid\Desktop\Projekt PO\Debug\Projekt PO.exe

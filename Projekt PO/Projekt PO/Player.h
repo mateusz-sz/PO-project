@@ -9,6 +9,7 @@
 
 #include "Animation.h"
 #include "Collider.h"
+#include "Bullet.h"
 
 using namespace sf;
 class Player
@@ -21,13 +22,16 @@ public:
 
 	Vector2f GetPlayerPosition();
 	Collider GetCollider() { return Collider(body); }
+	int GetPlayerDir() { return direction; }
 
 private:
 	int Health, Armor;
 	float PlayerSpeed;
+	int direction;
 
-	Animation animation;
 	RectangleShape body;
+	Animation animation;
+	Texture PlayerTexture;
 
 	unsigned int row;
 	

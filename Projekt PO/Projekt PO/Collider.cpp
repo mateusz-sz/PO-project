@@ -4,15 +4,27 @@
 
 Collider::Collider(RectangleShape& body)
 	:body(body)
+	,shape(shape)
 {
 
 }
+Collider::Collider(CircleShape& shape)
+	: body(body)
+	, shape(shape)
+{
 
+}
 
 Collider::~Collider()
 {
 }
-
+bool Collider::CheckBulletCollision(Collider other, float push)
+{
+	FloatRect enemy = other.GetRectBounds();
+	FloatRect bullet = GetCircleBounds();
+	if (bullet.intersects(enemy))return true;
+	else return false;
+}
 bool Collider::CheckCollision(Collider other, float push)
 {
 	Vector2f otherPosition = other.GetPosition();

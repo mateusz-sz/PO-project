@@ -14,6 +14,7 @@ class Collider
 {
 public:
 	Collider(RectangleShape& body);
+	Collider(CircleShape& shape);
 	~Collider();
 
 	void Move(float dx, float dy) { body.move(dx, dy); }
@@ -21,8 +22,12 @@ public:
 	Vector2f GetPosition() { return body.getPosition(); }
 	Vector2f GetHalfSize() { return body.getSize() / 2.0f; }
 
-
+	bool CheckBulletCollision(Collider other, float push);
+	Vector2f GetBulletPosition() { return shape.getPosition(); }
+	FloatRect GetRectBounds() { return body.getGlobalBounds(); }
+	FloatRect GetCircleBounds() { return shape.getGlobalBounds(); }
 private:
 	RectangleShape& body;
+	CircleShape& shape;
 };
 

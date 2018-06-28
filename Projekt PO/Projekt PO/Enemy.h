@@ -28,6 +28,7 @@ public:
 
 private:
 	float Speed, Damage, Health;
+	bool isAlive;
 
 	unsigned int row;
 private:
